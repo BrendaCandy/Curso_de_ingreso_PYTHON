@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Brenda
+apellido: Candy
 ---
 Ejercicio: entrada_salida_08
 ---
@@ -41,8 +41,17 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        operador_a= self.txt_operador_a.get()
+        operdaor_b= self.txt_operador_b.get()
+        operador_a_int= int(operador_a)
+        operdaor_b_int= int(operdaor_b)
         
+        resto= operador_a_int % operdaor_b_int
+        resto_str= str(resto)
+
+        alert("UTN FRA","El resto de dividir "+ operador_a+" y "+operdaor_b+" es: "+resto_str)
+
+
         
     
 if __name__ == "__main__":
